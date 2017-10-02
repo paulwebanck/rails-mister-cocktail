@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cocktail.name %>
+</p>
+
+<% @cocktail.doses.each do |dose| %>
+  <%= dose.ingredient.name %>
+  <%= dose.description %>
+  <%= link_to "Delete dose", dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  <br>
+<% end %>
+
+<%= render 'doses/form' %>
+
+<%= link_to 'Back to cocktails', cocktails_path %>
