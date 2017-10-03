@@ -1,5 +1,18 @@
-<h1>New Cocktail</h1>
+<div id ="show-ban" class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://419a5ecf000c70751b96-2d268c5dae618615daa5314a1f0f4b99.r77.cf1.rackcdn.com/restaurants-irs/235125/EclipseCocktails1.png');">
+      <div class="banner-content">
+        <h1>Add a cocktail !</h1>
+      </div>
+    </div>
 
-<%= render 'form', cocktail: @cocktail %>
+<div id= "show-contain" class = "main-container">
+  <div class="row">
+    <div id= "show-form" class = "col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+      <h4>Add a cocktail here </h4>
+        <%= render 'form', cocktail: @cocktail %>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Back', cocktails_path %>
+<div class="add-footer">
+<a id="add-button" class="btn btn-primary btn-lg" <%= link_to 'Back to cocktails', cocktails_path %> </a>
+</div>

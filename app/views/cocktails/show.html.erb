@@ -1,19 +1,43 @@
-<p id="notice"><%= notice %></p>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-wagon">
+  <!-- Logo -->
+      <a href="/" class="navbar-wagon-brand">
+      <img src="images/logo.png" alt="logo">
+      </a>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-</p>
+  <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <a class="btn btn-primary btn-lg" <%= link_to 'Back to cocktails', cocktails_path %> </a>
+      </div>
+    </div>
+  </nav>
 
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.ingredient.name %>
-  <%= dose.description %>
-  <%= link_to "Delete", dose_path(dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-  <br>
-<% end %>
+    <div id ="show-ban" class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://419a5ecf000c70751b96-2d268c5dae618615daa5314a1f0f4b99.r77.cf1.rackcdn.com/restaurants-irs/235125/EclipseCocktails1.png');">
+      <div class="banner-content">
+        <h1><%=@cocktail.name%></h1>
+      </div>
+    </div>
 
-<%= render 'doses/form' %>
-
-<%= link_to 'Back to cocktails', cocktails_path %>
+<div id= "show-contain" class = "main-container">
+  <div class="row">
+    <div id="img-show" class = "col-xs-12 col-sm-6 col-lg-3">
+    <%= cl_image_tag @cocktail.photo, height: 200, width: 250, crop: :fill %>
+    </div>
+    <div id="recipe" class = "col-xs-12 col-sm-6 col-lg-3">
+    <h3> Easy recipe just here:</h3>
+    <% @cocktail.doses.each do |dose| %>
+      <%= "-" %>
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+      <%= link_to "Delete", dose_path(dose),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+      <br>
+    <% end %>
+    </div>
+    <div id= "show-form" class = "col-xs-12 col-lg-3 ">
+    <h4>Add a dose here </h4>
+    <%= render 'doses/form' %>
+    </div>
+  </div>
+</div>

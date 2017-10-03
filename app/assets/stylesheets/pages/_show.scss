@@ -1,0 +1,40 @@
+
+
+#show-ban {
+  height: 40vh;
+}
+
+#show-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-xs-12-col-sm-6 p {
+  font-size: 15px;
+}
+
+#img-show {
+  margin-bottom: 30px;
+}
+
+.row {
+  width: 100%;
+
+}
+
+#show-contain {
+  background-color: white;
+}
+
+
+
+#recipe {
+  margin-bottom: 100px;
+}
+
+@media (min-width : 450px) {
+#show-form {
+  width: 400px;
+}
+}

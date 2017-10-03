@@ -8,6 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-width: 0px;
+  border: none;
 }
 
 /* Logo */
@@ -20,6 +27,7 @@
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  background-color: transparent;
 }
 
 /* Right section */
@@ -27,22 +35,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 }
 
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+  background-color: transparent;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  background-color: transparent;
 }
 .navbar-wagon-link:hover {
   color: #da552f;
   text-decoration: none;
+  background-color: transparent;
 }
 
 /* Dropdown menu */
@@ -50,6 +62,7 @@
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
+  background-color: transparent;
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
@@ -58,10 +71,12 @@
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
+  background-color: transparent;
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
+  background-color: transparent;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
@@ -74,4 +89,5 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+  background-color: transparent;
 }
